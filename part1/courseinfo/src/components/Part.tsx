@@ -1,11 +1,11 @@
 interface PartProps {
-  part: string
+  name: string
   exercises: number
 }
-const Part = ({ part, exercises }: PartProps) => {
+const Part = ({ name, exercises }: PartProps) => {
   return (
     <p>
-      {part} {exercises}
+      {name} {exercises}
     </p>
   )
 }

@@ -1,9 +1,9 @@
 interface HeaderProps {
-  course: string
+  name: string
 }
 
-const Header = ({ course }: HeaderProps) => {
-  return <h1>{course}</h1>
+const Header = ({ name }: HeaderProps) => {
+  return <h1>{name}</h1>
 }
 
 export default Header

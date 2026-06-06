@@ -6,7 +6,7 @@ interface TotalProps {
 
 const Total = ({ parts }: TotalProps) => {
   const total = parts.reduce((sum, part) => sum + part.exercises, 0)
-  return <p>Number of exercises {total}</p>
+  return <strong>total of {total} exercises</strong>
 }
 
 export default Total
