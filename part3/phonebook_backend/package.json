@@ -21,6 +21,7 @@
   "type": "module",
   "dependencies": {
     "express": "^5.2.1",
+    "mongoose": "^9.7.0",
     "morgan": "^1.11.0"
   }
 }
