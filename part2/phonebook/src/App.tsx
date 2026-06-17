@@ -80,11 +80,19 @@ const App = () => {
         name: newName,
         number: phoneNumber,
       }
-      phonebookService.create(nameObject).then((returnedPerson) => {
-        setPersons([...persons, returnedPerson])
-        setNewName("")
-        setPhoneNumber("")
-      })
+      phonebookService
+        .create(nameObject)
+        .then((returnedPerson) => {
+          setPersons([...persons, returnedPerson])
+          setNewName("")
+          setPhoneNumber("")
+        })
+        .catch((error) => {
+          setNotificationMessage({
+            message: error.response.data.error,
+            type: "error",
+          })
+        })
       setNotificationMessage({ message: `Added ${newName}`, type: "success" })
       setTimeout(() => {
         setNotificationMessage({ message: "", type: "" })
